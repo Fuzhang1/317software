@@ -36,7 +36,7 @@ public class DB_Pool implements DataSource {
                 check();
              }
          };
-         new Timer().schedule(timerTask,100000,30000);
+         new Timer().schedule(timerTask,1000000,1000000);
 
     }
 
@@ -77,7 +77,17 @@ public class DB_Pool implements DataSource {
 
     public void release(Connection con){
         Log.wtf("2","release:" + pool.size());
-        pool.add(con);
+        if(pool.size()>max){
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            pool.add(con);
+        }
+
     }
 
     @Override
@@ -87,7 +97,7 @@ public class DB_Pool implements DataSource {
             return  pool.remove(0);
         }
         else{
-            throw new RuntimeException("连接数量已用尽");
+            return  DB_Con.getConn();
         }
     }
 
