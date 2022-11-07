@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommunityActivity"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="9">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_community"
+            android:layout_width="0dp"
+            android:layout_height="490dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_infomation"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/tv_Comm_Iin"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+
+            android:text="我加入的"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#F3B5B5"
+            app:layout_constraintBottom_toTopOf="@+id/tv_infomation"
+            app:layout_constraintEnd_toStartOf="@+id/tv_createComm"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_createComm"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="创建社群"
+
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_findComm"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_Comm_Iin"
+            app:layout_constraintTop_toTopOf="@+id/tv_Comm_Iin"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_findComm"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="发现社群"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_createComm"
+            app:layout_constraintTop_toTopOf="@+id/tv_createComm" />
+
+        <TextView
+            android:id="@+id/tv_infomation"
+            android:layout_width="118dp"
+            android:layout_height="32dp"
+            android:text="我加入的社群"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_view_community"
+            app:layout_constraintStart_toStartOf="@+id/recycler_view_community"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Comm_Iin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_homepage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="首页"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_community2"
+            app:layout_constraintEnd_toStartOf="@+id/tv_community2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_community2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="社群"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_collection2"
+            app:layout_constraintEnd_toStartOf="@+id/tv_collection2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_homepage2" />
+
+        <TextView
+            android:id="@+id/tv_collection2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="商品"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_mine2"
+            app:layout_constraintEnd_toStartOf="@+id/tv_mine2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_community2"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_mine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="我的"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_collection2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

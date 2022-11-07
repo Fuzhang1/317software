@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommodityReleaseActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/daohang"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F6F0F0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_fanhui"
+            android:layout_width="26dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/delete" />
+
+        <TextView
+
+            android:id="@+id/textView"
+            android:layout_width="98dp"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="资源发布"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btn_submit"
+            android:layout_width="82dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/btn_login_chosen"
+            android:gravity="center"
+            android:text="发布"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/et_community"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.85"
+        android:layout_height="44dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/bg_border"
+        android:hint="资源名称"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daohang" />
+
+    <EditText
+        android:id="@+id/et_introduction"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.85"
+        android:layout_height="176dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ziyuan_border"
+        android:gravity="start"
+        android:hint="请介绍您的资源~"
+        android:padding="20dp"
+        app:layout_constraintStart_toStartOf="@+id/et_community"
+        app:layout_constraintTop_toBottomOf="@+id/et_community" />
+
+    <ImageView
+        android:id="@+id/btn_img"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_marginBottom="236dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_introduction"
+        app:srcCompat="@mipmap/picadd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
