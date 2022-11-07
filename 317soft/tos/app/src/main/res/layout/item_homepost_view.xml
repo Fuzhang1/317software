@@ -55,31 +55,30 @@
 
             <TextView
                 android:id="@+id/grid_view_namedisp"
-                android:layout_width="81dp"
+                android:layout_width="69dp"
                 android:layout_height="wrap_content"
+
                 android:layout_alignTop="@+id/grid_view_title"
                 android:layout_alignEnd="@+id/cardView3"
                 android:layout_marginTop="0dp"
-                android:layout_marginEnd="2dp"
-                android:ellipsize="end"
+                android:layout_marginEnd="16dp"
                 android:gravity="center"
-                android:singleLine="true"
                 android:text="显示名称"
                 android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/grid_view_pricedisp"
-                android:layout_width="81dp"
+                android:layout_width="69dp"
                 android:layout_height="wrap_content"
+
+
                 android:layout_alignTop="@+id/grid_view_price"
                 android:layout_alignEnd="@+id/cardView3"
                 android:layout_alignBottom="@+id/grid_view_price"
                 android:layout_marginTop="0dp"
-                android:layout_marginEnd="0dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="1dp"
-                android:ellipsize="end"
                 android:gravity="center"
-                android:singleLine="true"
                 android:text="显示价格"
                 android:textSize="15sp" />
         </RelativeLayout>

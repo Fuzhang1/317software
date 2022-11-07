@@ -89,6 +89,7 @@ public class GridViewAdapter extends  RecyclerView.Adapter<GridViewAdapter.Inner
             mposition = position;
             mIcon.setImageBitmap(BitmapFactory.decodeByteArray(mData2.get(mposition).getPicture(),0,mData2.get(mposition).getPicture().length));
             String name = mData2.get(mposition).getTitle();
+            name = name.length()>7?name.substring(0,6)+"...":name;
             mnamedisp.setText(name);
             mpricedisp.setText(reBean.getPrice());
         }

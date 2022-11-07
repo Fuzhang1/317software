@@ -111,8 +111,8 @@ public class PostDB {
     public static List<Post> postsByDate(List<Integer> community_id) {
         List<Post> list = new ArrayList<>();
         int cnt = 10;
-        for(int i=0;i<community_id.size();i++){
-            String sql = "select * from tos_post where community_id=" + String.valueOf(community_id.get(i));
+        for(int i=0; i<community_id.size(); i++){
+            String sql = "select * from tos_post where community_id = " + String.valueOf(community_id.get(i)) + " order by id desc";
             Connection connection = DBUtil.getConn();
             Statement statement = null;
             ResultSet resultSet = null;
